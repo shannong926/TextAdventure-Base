@@ -1,29 +1,35 @@
-var inputBox = document.querySelector('#action');
+var player = function(name,profession,items) {
+      this.name = "Player 1";
+      this.profession = "lost child";
+      this.items = [];
+      describeInventory();
+}
 
-console.log(inputBox.tagName);
-console.log(inputBox.parentNode.tagName);
 
-var child = document.querySelector('#descrip');
 
-console.log(child.tagName);
-console.log(child.parentNode.tagName);
+var interpret = function(str){
+    var trimStr = str.trim();
+    var splitStr = trimmedStr.split('');
+    var action = splitStr.shift();
+    return [action,splitStr.join('')];
+}
 
-var t = document.querySelector('#inventory');
+var execute = function(player.items){
+    var action = items.pull[0];
+}
 
-console.log(t.tagName);
-console.log(t.parentNode.tagName);
 
-var out = document.querySelector('#game');
+var report = function(){
+}
 
-console.log(out.tagName);
-console.log(out.parentNode.tagName);
 
-var put = document.querySelector('#help');
+var gameStep = function(){
+    interpret();
+    execute();
+    report();
+}
 
-console.log(put.tagName);
-console.log(put.childNodes.tagName);
+enter.onClick = gameStep;
 
-var words = document.querySelector('#descrip');
+enter.addEventListener('gameStep',run);
 
-console.log(words.tagName);
-console.log(words.childNodes.tagName);
